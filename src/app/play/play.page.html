@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Play Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <h5>{{displayScene.title}}</h5>
+    <p>{{displayScene.desc}}</p>
+    <br>
+    <p>{{displayScene.decision}}</p>
+    <br>
+
+    <div *ngIf="(dice === 0); then thenBlock else elseBlock">
+
+    </div>
+  </div>
+</ion-content>
+
+
+
+<ng-template #thenBlock>
+  <ion-button (click)="decisionResult(displayScene.result1)">{{displayScene.choice1}}</ion-button>
+  <ion-button (click)="decisionResult(displayScene.result2)">{{displayScene.choice2}}</ion-button>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h1>{{dice}}</h1>
+  <ion-button (click)="decisionResult(diceIdx)">Continue</ion-button>
+</ng-template>

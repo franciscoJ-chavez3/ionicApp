@@ -1,0 +1,7 @@
+{
+  "name": "mobileAdventure",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
